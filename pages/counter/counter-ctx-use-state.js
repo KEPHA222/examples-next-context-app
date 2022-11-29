@@ -37,4 +37,14 @@ const CounterUseState = () => {
   );
 };
 
-export default CounterUseState;
+const CounterUseStatePage = () => {
+  return (
+    <div>
+      <CounterUseState />
+      <CounterUseState />
+      <CounterUseState />
+    </div>
+  );
+};
+
+export default CounterUseStatePage;

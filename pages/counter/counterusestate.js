@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 
-const Container = ({ setCounter }) => (
-  <div>
-    <AddOneButton setCounter={setCounter} />
-  </div>
-);
+const Container = ({ children }) => <div>{children}</div>;
 
 const AddOneButton = ({ setCounter }) => (
   <div>
@@ -18,7 +14,9 @@ const CounterUseState = () => {
   const [counter, setCounter] = useState(0);
   return (
     <div>
-      <Container setCounter={setCounter} />
+      <Container>
+        <AddOneButton setCounter={setCounter} />
+      </Container>
       <Counter counter={counter} />
     </div>
   );
